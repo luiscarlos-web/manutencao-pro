@@ -1,0 +1,55 @@
+prioridade,segmento,nome,endereco,bairro,raio_do_z7,telefone,contato_extra,por_que_e_alvo,confianca
+1,Parceria-chave,Joinville Region Convention & Visitors Bureau,"R. Ottokar Doerffel, 1733",Anita Garibaldi,ate 1 km,,visitejoinville.com.br,"Vizinho de rua (~250 m). Reune os meios de hospedagem da cidade — uma reuniao aqui abre dezenas de hoteis/pousadas de uma vez",alta
+1,Hospedagem,Hotel 10 Joinville,"R. Anita Garibaldi, 2131",Anita Garibaldi,ate 1 km,(47) 3439-3777,,"Hotel economico no mesmo bairro; alto giro de enxoval e sem lavanderia industrial propria",alta
+1,Hospedagem,Hotel Tannenhof,"R. Visconde de Taunay, 340",Centro/Atiradores,1-3 km,,"98 quartos, piscina e academia","Porte medio-grande; alvo para enxoval extra em picos (Festival de Danca, eventos Expoville)",media
+1,Hospedagem,Pousada Ipanema,"R. Paraiba, 912",Anita Garibaldi,1-3 km,(47) 3227-8462,,"Pousada pequena no mesmo bairro — perfil que terceiriza enxoval",alta
+1,Hospedagem,Pousada Joinvilense,"R. Corupa, 267",Anita Garibaldi,1-3 km,(47) 98816-2760,,"Pousada pequena no mesmo bairro; WhatsApp direto com o dono",alta
+1,Hospedagem,American Hostel,"R. Capinzal, 584",America,1-3 km,(47) 99918-8474,,"Hostel = volume alto de lencol e toalha, margem apertada, adora terceirizar",alta
+2,Hospedagem,Hotel Germania,"R. Ministro Calogeras, 612",Centro,1-3 km,(47) 3433-9886,hotelgermania.com.br,"Trabalha com aluguel por dia E por mes — troca de enxoval constante",alta
+2,Hospedagem,Principe Hotel,"R. Jeronimo Coelho, 27 - sala 06",Centro,1-3 km,(47) 3433-4555,hprincipe.com.br,"Hotel de centro, publico corporativo",alta
+2,Hospedagem,Hotel Colon Palace,Centro,Centro,1-3 km,(47) 3433-6188,hotelcolon.com.br,"Hotel de centro com piscina e academia (toalhas extras)",alta
+2,Hospedagem,Joinville Hostel & Pousada,"R. Dona Francisca, 1376",Saguacu,3-6 km,(47) 3424-0844,info@joinvillehostel.com.br,"Hostel consolidado; volume alto de roupa de cama",alta
+2,Hospedagem,Pousada Saguacu (Saguacu Pousada Hotel),"R. Guaratuba, 189",Saguacu,3-6 km,(47) 3435-3747,(47) 98855-3191,"Pousada desde 1989, operacao enxuta e familiar",alta
+2,Hospedagem,Pousada Bom Sossego,"R. Francisco Gomes de Oliveira, 410",Saguacu,3-6 km,(47) 98914-4439,,"Pousada pequena — decisor atende o proprio WhatsApp",media
+2,Hospedagem,Paradizzo Apart Hotel,"R. Dona Francisca, 3383",Zona Industrial Norte,3-6 km,(47) 3804-4000,"WhatsApp (47) 98443-0738 / reservas@paradizzohotel.com.br","Apart-hotel de estadia longa para profissionais — enxoval + roupa de hospede",alta
+2,Hospedagem,Louros Apart Hotel,,Bom Retiro,3-6 km,(47) 3427-5656,,"Apart-hotel, estadias longas",media
+3,Hospedagem,Hostel Cidade das Flores,"Rua Manaus, 140",Joinville,3-6 km,(47) 99979-1951,,"Hostel com cafe da manha; volume de cama e mesa",media
+3,Hospedagem,Hostel Mandallah,"R. Cecilio Ferreira, 186",Iririu,3-6 km,(47) 99931-2958,,Hostel,media
+3,Hospedagem,Hostel e Pousada Boa Vista,"R. Sao Borja, 532",Boa Vista,3-6 km,(47) 98914-9835,,Hostel,media
+3,Hospedagem,Economica Joinville Hostel e Pousada,"R. Jose Gerard Rolim Filho, 259",Bom Retiro,3-6 km,(47) 98488-9961,,Hostel economico,media
+3,Hospedagem,Hostel Casa do Sol,"R. Reporter Luiz Mauro, 64",Iririu,3-6 km,,,"Confirmar telefone no Google Maps",verificar
+3,Hospedagem,Hostel Urbano Joinville,,Joinville,verificar,,hosteljoinville.com.br,"Anuncia lavanderia propria — abordar como backup em pico e para enxoval pesado",media
+3,Hospedagem,Dois H Hotel,,Joinville,verificar,,doishhotel.com.br,"Confirmar endereco: ha registro homonimo em Sao Francisco do Sul",verificar
+1,Airbnb/Temporada,Otto House (Tina Marcato),,Joinville,verificar,(47) 99984-1352,tina@ottohouse.com.br,"Trabalha com lofts/flats do Ed. Prinz Mercure — carteira de imoveis de temporada",alta
+1,Airbnb/Temporada,Alugueis Prime,,Joinville,verificar,,alugueisprime.com.br,"Administra flats no Prinz Mercure (Atiradores) — carteira inteira em um contrato",media
+2,Airbnb/Temporada,Anfitriao Prime,,Nacional/Joinville,verificar,,anfitriaoprime.com.br,"Administradora nacional de Airbnb que atua em Joinville — contrato guarda-chuva",media
+1,Airbnb/Temporada,Edificio Prinz Mercure (zelador/sindico),,America,1-3 km,,,"Predio com muitos flats de temporada — falar com zelador e deixar material na portaria",verificar
+1,Lar de idosos,Residencial Geriatrico Hera,"R. Dr. Placido Olimpio de Oliveira, 256",Bucarein,1-3 km,(47) 99624-0990,,"ILPI = enxoval trocado todo dia, volume previsivel e contrato mensal",alta
+1,Lar de idosos,Casa de Repouso Cuidar,"R. Piratuba, 1187",Saguacu,3-6 km,,casaderepousocuidar.com.br,"Confirmar telefone no site",media
+1,Lar de idosos,Casa de Repouso Feliz Idade,"R. Riachuelo, 123",Bom Retiro,3-6 km,(47) 3034-1818,,ILPI,alta
+1,Lar de idosos,Blumerville Casa de Repouso,"Rua Sol, 144",Gloria,3-6 km,,casaderepousoblumerville.com.br,"Confirmar telefone no site",media
+2,Lar de idosos,Casa de Repouso Por do Sol,"R. Marechal Hermes, 754",Gloria,3-6 km,(47) 3207-2059,,ILPI,alta
+2,Lar de idosos,Casa Geriatrica Viver Mais Feliz,"R. Raul Pascoal Fernandes, 521",Adhemar Garcia,3-6 km,(47) 3426-3294,,ILPI,alta
+1,Pet shop,Pet shop - R. Ministro Calogeras 1472,"R. Ministro Calogeras, 1472",Atiradores,ate 1 km,(47) 99738-2080,(47) 99717-2108,"Banho e tosa = dezenas de toalhas por dia. Confirmar o nome ao ligar",verificar
+1,Pet shop,Pet shop - R. Coronel Santiago 870,"R. Coronel Santiago, 870 - sala 2",Anita Garibaldi,ate 1 km,(47) 98903-9023,,"Banho e tosa. Confirmar o nome ao ligar",verificar
+2,Pet shop,Pet shop - R. Aquidaban 730,"R. Aquidaban, 730",America,1-3 km,(47) 3432-1792,(47) 99751-5499,"Banho e tosa. Confirmar o nome ao ligar",verificar
+2,Pet shop,Pet shop - R. Jaragua 910,"R. Jaragua, 910 - salas 1 e 2",America,1-3 km,(47) 3023-7320,(47) 99783-0156,"Banho e tosa. Confirmar o nome ao ligar",verificar
+2,Pet shop,Vita Vet Clinica Veterinaria e Pet Shop,"R. Otto Boehm, 847",America,1-3 km,,,"Confirmar telefone no Google Maps",media
+3,Pet shop,ECL Pet Shop,R. Rio Grande do Sul,Anita Garibaldi,ate 1 km,,,"Confirmar numero e telefone",verificar
+1,Barbearia/Salao,Barbearia Navajo,"R. Ottokar Doerffel, 730 - sala 4",Atiradores,ate 1 km,,,"Mesma rua da lavanderia (~800 m). Toalhas todo dia. Visita a pe",media
+1,Barbearia/Salao,Barbearia Joinville,"R. Rio Grande do Sul, 260 - sala 03",Anita Garibaldi,ate 1 km,(47) 99945-1884,,Toalhas diarias,alta
+2,Barbearia/Salao,Espaco Barbearia,"R. Anita Garibaldi, 961",Anita Garibaldi,ate 1 km,,,"Confirmar telefone no Google Maps",media
+2,Barbearia/Salao,Tiao Cabeleireiros,"Av. Getulio Vargas, 1446 - s. 62/63",Anita Garibaldi,1-3 km,,,"Salao tradicional; toalhas e capas",media
+1,Estetica/Spa,MS Corpo & Mente Spa,"R. Dr. Roberto Koch, 71B - fundos",Atiradores,ate 1 km,,,"Spa urbano: lencois de maca, toalhas e roupoes todo dia",media
+2,Estetica/Spa,Jana Fantoni Clinica de Estetica,"R. Padre Kolb, 1547",Anita Garibaldi,ate 1 km,,janafantoni.com.br,Lencois de maca e toalhas,media
+2,Estetica/Spa,Homenz Joinville (estetica masculina),"R. Anita Garibaldi, 413 - loja 02",Anita Garibaldi,ate 1 km,,homenzjoinville.com.br,Toalhas diarias,media
+1,Academia,Complexo Esportivo Oda Fitness,"R. Parana, 56",Anita Garibaldi,ate 1 km,(47) 3429-2031,,"Toalhas de treino e panos de higienizacao de aparelho",alta
+2,Academia,Academia Ph.D Sports Joinville,"R. Eugenio Moreira, 331",Anita Garibaldi,ate 1 km,,,"Confirmar telefone no Google Maps",media
+2,Academia,Academia Getulio,"R. Dr. Placido Gomes, 308",Anita Garibaldi,ate 1 km,,,"Confirmar telefone no Google Maps",media
+2,Academia,Noxii Live Center,"R. Pernambuco, 574",Atiradores,ate 1 km,,,"Confirmar telefone no Google Maps",media
+2,Restaurante,Biergarten,"R. Visconde de Taunay, 1183",Centro,1-3 km,(47) 3028-3771,,"Via Gastronomica: panos, aventais e toalhas de mesa",alta
+2,Restaurante,Fattori da Visconde,"R. Visconde de Taunay, 1136",Centro,1-3 km,(47) 3027-7727,,Via Gastronomica,alta
+2,Restaurante,Pizza na Pedra,"R. Visconde de Taunay, 1223",Centro,1-3 km,(47) 3028-1868,,Via Gastronomica,alta
+3,Restaurante,D.O.C. Cucina e Co,"R. Visconde de Taunay, 146",Centro,1-3 km,(47) 3025-3822,,Via Gastronomica,alta
+3,Restaurante,Hosu Sushi,"R. Visconde de Taunay, 572 B",Centro,1-3 km,(47) 98838-2575,,Via Gastronomica,alta
+1,Vizinho imediato,Borracharia do Alemao,"R. Ottokar Doerffel, 1489",Anita Garibaldi,0 km,(47) 3417-3000,,"Opera no mesmo endereco do posto — uniformes engordurados e parceria de indicacao",media
