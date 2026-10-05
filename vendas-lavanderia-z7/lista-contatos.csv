@@ -23,7 +23,7 @@ prioridade,segmento,nome,endereco,bairro,raio_do_z7,telefone,contato_extra,por_q
 1,Airbnb/Temporada,Otto House (Tina Marcato),,Joinville,verificar,(47) 99984-1352,tina@ottohouse.com.br,"Trabalha com lofts/flats do Ed. Prinz Mercure — carteira de imoveis de temporada",alta
 1,Airbnb/Temporada,Alugueis Prime,,Joinville,verificar,,alugueisprime.com.br,"Administra flats no Prinz Mercure (Atiradores) — carteira inteira em um contrato",media
 2,Airbnb/Temporada,Anfitriao Prime,,Nacional/Joinville,verificar,,anfitriaoprime.com.br,"Administradora nacional de Airbnb que atua em Joinville — contrato guarda-chuva",media
-1,Airbnb/Temporada,Edificio Prinz Mercure (zelador/sindico),,America,1-3 km,,,"Predio com muitos flats de temporada — falar com zelador e deixar material na portaria",verificar
+1,Predio de studios,Edificio Prinz Mercure (zelador/sindico),,America,1-3 km,,,"Predio com muitos flats de temporada — falar com zelador e deixar material na portaria",verificar
 1,Lar de idosos,Residencial Geriatrico Hera,"R. Dr. Placido Olimpio de Oliveira, 256",Bucarein,1-3 km,(47) 99624-0990,,"ILPI = enxoval trocado todo dia, volume previsivel e contrato mensal",alta
 1,Lar de idosos,Casa de Repouso Cuidar,"R. Piratuba, 1187",Saguacu,3-6 km,,casaderepousocuidar.com.br,"Confirmar telefone no site",media
 1,Lar de idosos,Casa de Repouso Feliz Idade,"R. Riachuelo, 123",Bom Retiro,3-6 km,(47) 3034-1818,,ILPI,alta
@@ -53,3 +53,14 @@ prioridade,segmento,nome,endereco,bairro,raio_do_z7,telefone,contato_extra,por_q
 3,Restaurante,D.O.C. Cucina e Co,"R. Visconde de Taunay, 146",Centro,1-3 km,(47) 3025-3822,,Via Gastronomica,alta
 3,Restaurante,Hosu Sushi,"R. Visconde de Taunay, 572 B",Centro,1-3 km,(47) 98838-2575,,Via Gastronomica,alta
 1,Vizinho imediato,Borracharia do Alemao,"R. Ottokar Doerffel, 1489",Anita Garibaldi,0 km,(47) 3417-3000,,"Opera no mesmo endereco do posto — uniformes engordurados e parceria de indicacao",media
+1,Predio de studios,Ed. Frame (46 unidades - studios de 38 m2),"R. Concordia, 28",Anita Garibaldi,ate 1 km,,Construtora Viplan - entregue dez/2025,"Melhor alvo: predio novo com studios de investidor, anfitrioes recem-chegados e ainda sem lavanderia definida",alta
+1,Predio de studios,Mingus 897 (54 unidades - smart building),"R. Coronel Santiago, 897",Anita Garibaldi,ate 1 km,,LHW Engenharia,"Predio compacto de investidor; mesma rua do pet shop do n 870",alta
+1,Predio de studios,Curacao Residence,"R. Porto Uniao, 1194",Anita Garibaldi,ate 1 km,,"plantas de 39 a 163 m2, coworking e piscina","Entregue, com unidades mobiliadas sendo alugadas; coworking atrai hospede corporativo de estadia curta",alta
+1,Short stay/operador,FlipChave,"R. Dona Francisca, 2948",Saguacu,3-6 km,(47) 99788-0123,contato@flipchave.com.br,"Startup joinvilense de hospedagem short stay e socia do HotelSmart (124 studios). Um contrato vale por dezenas de anfitrioes",alta
+1,Multiplicador,Construtora Convisa,"R. Jacob Eisenhuth, 572",Atiradores,ate 1 km,(47) 3032-4400,"seg-sex 8h-18h, sab 8h-14h","Constroi o HotelSmart com a FlipChave e tem a lista dos investidores compradores",alta
+2,Short stay/operador,55 Smart Hotel (55 Inn Flat),"R. XV de Novembro, 3555",Gloria,3-6 km,(47) 99179-1887,contato@55smarthotel.com,"Apart-hotel de 14 unidades: porte que nao justifica lavanderia propria",alta
+2,Multiplicador,Construtora Viplan,"R. Evaristo da Veiga, 343",Gloria,3-6 km,(47) 3205-0050,"(47) 98415-1340 / comercial@construtoraviplan.com.br","Incorporadora do Ed. Frame; tem a carteira de compradores-investidores",alta
+2,Multiplicador,B.Homy - gestao de Airbnb,,Atua em SC,verificar,,bhomy.com,"Gestora em 15+ cidades de SP, SC, RJ e MG; cuida de limpeza e enxoval",media
+3,Multiplicador,Anfitrioes Gestao de Imoveis,,Atua em Joinville,verificar,,anfitrioesgestaodeimoveis.com,"Gestora de imoveis por temporada; contato pelo site",media
+3,Predio de studios,Wave Residence (studios de 28 m2 - entrega jul/2028),"divisa Anita Garibaldi / Atiradores",Anita Garibaldi,ate 1 km,,"obra desde jul/2025, a partir de R$ 282 mil","Ainda nao existe como cliente, mas os compradores investidores ja estao fechando agora",media
+3,Predio de studios,HotelSmart (124 studios mobiliados - em obra),endereco a confirmar,Anita Garibaldi,verificar,,FlipChave + Convisa - obra desde jan/2026,"Maior pool de anfitrioes pequenos que vai existir no bairro; chegue via FlipChave ou Convisa",media

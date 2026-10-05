@@ -170,7 +170,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
   <header class="mast">
     <div class="kicker">
       <span class="lbl">Lavanderia &middot; Posto Zandoná Z7</span>
-      <span class="lbl" style="color:var(--signal)">54 contatos</span>
+      <span class="lbl" style="color:var(--signal)">65 contatos</span>
     </div>
     <h1>Rota Comercial Z7</h1>
     <p class="sub">Prospecção B2B da lavanderia: pousadas, Airbnb, lares de idosos, pet shops e comércio no raio de 6&nbsp;km do posto. Marque o status conforme for ligando — fica salvo e sincroniza entre seus aparelhos.</p>
@@ -180,7 +180,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
       <span class="mono">(47) 3438-8571</span>
     </div>
     <div class="score">
-      <div><div class="lbl">Na lista</div><div class="n" id="s-total">54</div></div>
+      <div><div class="lbl">Na lista</div><div class="n" id="s-total">65</div></div>
       <div><div class="lbl">Já contatados</div><div class="n" id="s-cont">0</div></div>
       <div class="conversa"><div class="lbl">Em negociação</div><div class="n" id="s-neg">0</div></div>
       <div class="fechado"><div class="lbl">Fecharam</div><div class="n" id="s-fec">0</div></div>
@@ -214,6 +214,10 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     <p class="lead">Cinco movimentos que valem mais do que qualquer ligação isolada — e quatro deles são de graça.</p>
     <ul class="tips">
       <li data-hot>
+        <h3>Peça indicação ao cliente dos 3 studios — hoje</h3>
+        <p>É a sua ação de maior conversão agora, e custa uma mensagem. Quem tem studio conhece os vizinhos de prédio e está nos grupos de WhatsApp de condômino e de anfitrião da cidade. Peça três nomes e autorização para dizer que foi ele quem indicou — e devolva em desconto na mensalidade dele a cada indicado que fechar. Um cliente satisfeito vale mais que trinta ligações frias.</p>
+      </li>
+      <li data-hot>
         <h3>Google Meu Negócio, antes de tudo</h3>
         <p>“Lavanderia perto de mim” é o maior canal de aquisição do setor, e é gratuito. Perfil próprio da lavanderia (separado do posto), categoria certa, fotos das máquinas, horário 6h–22h, botão de WhatsApp — e pedido ativo de avaliação a cada cliente. Meta: 30 avaliações em 60 dias.</p>
       </li>
@@ -246,7 +250,8 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
   "use strict";
 
   var SEGS = {
-    parceria:"Parceria-chave", hospedagem:"Hospedagem", airbnb:"Airbnb / Temporada",
+    parceria:"Parceria-chave", hospedagem:"Hospedagem", airbnb:"Short stay / operador",
+    predio:"Prédio de studios", multiplicador:"Multiplicador",
     ilpi:"Lar de idosos", pet:"Pet shop", beleza:"Beleza / Estética",
     academia:"Academia", restaurante:"Restaurante", vizinho:"Vizinho imediato"
   };
@@ -256,7 +261,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     {id:1, when:"Semana 1", t:"Vizinhança, a pé", d:"Tudo que dá para visitar caminhando. Leve cartão e ofereça uma lavagem de cortesia — conversão alta e imediata. Comece pelo Convention Bureau: fica na mesma rua e abre dezenas de hotéis de uma vez."},
     {id:2, when:"Semana 2", t:"Hospedagem e Via Gastronômica", d:"Pousada pequena e hostel: o decisor é o dono e atende o próprio WhatsApp. Ligue entre 9h–11h ou 14h–17h."},
     {id:3, when:"Semana 3", t:"Lares de idosos", d:"Ciclo de decisão mais longo, ticket bem maior, enxoval trocado todo dia. Peça para falar com a administração, nunca com a recepção."},
-    {id:4, when:"Semana 4", t:"Airbnb e temporada", d:"Na ordem: diaristas, administradoras, zeladores de prédio e Instagram. Nunca aborde anfitrião pelo chat do Airbnb."}
+    {id:4, when:"Semana 4", t:"Short stay: donos de 2 a 5 studios", d:"Três frentes. Os operadores pequenos, que já têm telefone público. Os prédios de studio, onde os anfitriões estão concentrados — vá presencialmente, fale com zelador e síndico. E os multiplicadores: uma construtora ou gestora entrega dezenas de anfitriões de uma vez. Nunca aborde anfitrião pelo chat do Airbnb."}
   ];
 
   var P = [
@@ -314,9 +319,20 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     {id:"vivermais", w:3, prio:2, seg:"ilpi", nome:"Casa Geriátrica Viver Mais Feliz", end:"R. Raul Pascoal Fernandes, 521", bairro:"Adhemar Garcia", raio:"c", tel:["(47) 3426-3294"], why:"ILPI.", pitch:"ilpi"},
 
     {id:"ottohouse", w:4, prio:1, seg:"airbnb", nome:"Otto House — Tina Marcato", end:"", bairro:"Joinville", raio:"x", tel:["(47) 99984-1352"], extra:"tina@ottohouse.com.br", why:"Trabalha com lofts e flats do Ed. Prinz Mercure. Uma conversa só alcança a carteira inteira de imóveis de temporada.", pitch:"gestora"},
-    {id:"prinz", w:4, prio:1, seg:"airbnb", nome:"Ed. Prinz Mercure — zelador e síndico", end:"Edifício Prinz Mercure", bairro:"América", raio:"b", tel:[], why:"Prédio com muitos flats de temporada. Cartaz no elevador e material na portaria chega em dezenas de anfitriões de uma vez. Vá presencialmente.", pitch:"gestora", check:true},
+    {id:"prinz", w:4, prio:1, seg:"predio", nome:"Ed. Prinz Mercure — zelador e síndico", end:"Edifício Prinz Mercure", bairro:"América", raio:"b", tel:[], why:"Prédio com muitos flats de temporada. Cartaz no elevador e material na portaria chega em dezenas de anfitriões de uma vez. Vá presencialmente.", pitch:"gestora", check:true},
     {id:"alugueisprime", w:4, prio:1, seg:"airbnb", nome:"Aluguéis Prime", end:"", bairro:"Joinville", raio:"x", tel:[], extra:"alugueisprime.com.br", why:"Administra flats no Prinz Mercure (Atiradores). Contrato guarda-chuva para vários imóveis.", pitch:"gestora", check:true},
-    {id:"anfitriaoprime", w:4, prio:2, seg:"airbnb", nome:"Anfitrião Prime", end:"", bairro:"Atua em Joinville", raio:"x", tel:[], extra:"anfitriaoprime.com.br", why:"Administradora nacional de Airbnb com carteira em Joinville. Contato pelo site.", pitch:"gestora", check:true}
+    {id:"anfitriaoprime", w:4, prio:2, seg:"airbnb", nome:"Anfitrião Prime", end:"", bairro:"Atua em Joinville", raio:"x", tel:[], extra:"anfitriaoprime.com.br", why:"Administradora nacional de Airbnb com carteira em Joinville. Contato pelo site.", pitch:"gestora", check:true},
+    {id:"frame", w:4, prio:1, seg:"predio", nome:"Ed. Frame — 46 unidades, studios de 38 m²", end:"R. Concórdia, 28", bairro:"Anita Garibaldi", raio:"a", tel:[], extra:"Construtora Viplan · entregue em dez/2025", why:"O melhor alvo da lista: prédio novo, entregue há poucos meses, com studios de investidor. Os anfitriões acabaram de começar e ainda não têm lavanderia definida. Chegue antes do concorrente.", pitch:"studios"},
+    {id:"mingus", w:4, prio:1, seg:"predio", nome:"Mingus 897 — 54 unidades, smart building", end:"R. Coronel Santiago, 897", bairro:"Anita Garibaldi", raio:"a", tel:[], extra:"LHW Engenharia · tem flats e studios de 1 quarto", why:"Prédio compacto e tecnológico, perfil de investidor. Fica na mesma rua do pet shop do nº 870 — dá para fazer os dois na mesma caminhada.", pitch:"studios"},
+    {id:"curacao", w:4, prio:1, seg:"predio", nome:"Curaçao Residence", end:"R. Porto União, 1194", bairro:"Anita Garibaldi", raio:"a", tel:[], extra:"plantas de 39 a 163 m², com coworking e piscina", why:"Entre Anita Garibaldi e Atiradores, já entregue e com unidades mobiliadas sendo alugadas. Coworking no prédio = hóspede corporativo de estadia curta.", pitch:"studios"},
+    {id:"flipchave", w:4, prio:1, seg:"airbnb", nome:"FlipChave — hospedagem short stay", end:"R. Dona Francisca, 2948", bairro:"Saguaçu", raio:"c", tel:["(47) 99788-0123"], extra:"contato@flipchave.com.br · flipchave.com.br", why:"Startup joinvilense que opera hospedagem de curta temporada com software próprio — e é sócia do HotelSmart, de 124 studios. Um contrato aqui vale por dezenas de anfitriões soltos.", pitch:"gestora"},
+    {id:"convisa", w:4, prio:1, seg:"multiplicador", nome:"Construtora Convisa", end:"R. Jacob Eisenhuth, 572", bairro:"Atiradores", raio:"a", tel:["(47) 3032-4400"], extra:"seg a sex 8h–18h, sáb 8h–14h", why:"Constrói o HotelSmart (124 studios mobiliados, obra desde jan/2026) junto com a FlipChave. Está pertinho do posto e tem a lista dos investidores compradores. Proponha ser a lavanderia indicada do empreendimento.", pitch:"gestora"},
+    {id:"smart55", w:4, prio:2, seg:"airbnb", nome:"55 Smart Hotel (55 Inn Flat)", end:"R. XV de Novembro, 3555", bairro:"Glória", raio:"c", tel:["(47) 99179-1887"], extra:"contato@55smarthotel.com · 14 unidades", why:"Apart-hotel de 14 unidades — exatamente o porte que não justifica lavanderia própria nem interessa lavanderia industrial.", pitch:"studios"},
+    {id:"viplan", w:4, prio:2, seg:"multiplicador", nome:"Construtora Viplan", end:"R. Evaristo da Veiga, 343", bairro:"Glória", raio:"c", tel:["(47) 3205-0050","(47) 98415-1340"], extra:"comercial@construtoraviplan.com.br", why:"Incorporadora do Ed. Frame e de outros compactos. Tem a carteira de compradores-investidores — peça para ser indicado na entrega das chaves.", pitch:"gestora"},
+    {id:"bhomy", w:4, prio:2, seg:"multiplicador", nome:"B.Homy — gestão de Airbnb", end:"", bairro:"Atua em SC", raio:"x", tel:[], extra:"bhomy.com", why:"Gestora presente em mais de 15 cidades de SP, SC, RJ e MG. Cuida de limpeza e enxoval dos imóveis que administra.", pitch:"gestora", check:true},
+    {id:"anfitrioesgestao", w:4, prio:3, seg:"multiplicador", nome:"Anfitriões Gestão de Imóveis", end:"", bairro:"Atua em Joinville", raio:"x", tel:[], extra:"anfitrioesgestaodeimoveis.com", why:"Gestora de imóveis por temporada. Contato pelo site.", pitch:"gestora", check:true},
+    {id:"wave", w:4, prio:3, seg:"predio", nome:"Wave Residence — studios de 28 m² (entrega jul/2028)", end:"divisa Anita Garibaldi / Atiradores", bairro:"Anita Garibaldi", raio:"a", tel:[], extra:"obra iniciada em jul/2025 · a partir de R$ 282 mil", why:"Ainda não existe como cliente — mas os compradores investidores já estão fechando contrato agora. Entre pela corretora para ser a lavanderia indicada desde a entrega.", pitch:"gestora"},
+    {id:"hotelsmart", w:4, prio:3, seg:"predio", nome:"HotelSmart — 124 studios mobiliados (em obra)", end:"endereço a confirmar", bairro:"Anita Garibaldi", raio:"x", tel:[], extra:"FlipChave + Convisa · obra desde jan/2026", why:"124 studios mobiliados de investidor num prédio só. É o maior pool de anfitriões pequenos que vai existir no bairro. Chegue via FlipChave ou Convisa, não espere ficar pronto.", pitch:"gestora", check:true}
   ];
 
   var SCRIPTS = [
@@ -326,6 +342,8 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
      txt:"Oi, [nome]! Vi que você cuida de imóveis de temporada aqui na região. Sou da lavanderia do Posto Zandoná (Ottokar Doerffel, 1489). A gente resolve o enxoval entre um hóspede e outro: deixou até as 10h, está pronto no mesmo dia — dá tempo de virar o apartamento entre o check-out e o check-in. Busco e entrego de graça. Quer testar numa virada?"},
     {k:"comercio", t:"Pet shop, barbearia, salão, academia e restaurante", via:"Presencial",
      txt:"Somos a lavanderia aqui do posto, a poucos minutos daqui. Sei que vocês gastam um tempo enorme com toalha todo dia. A gente lava por quilo, busca e entrega. Quer me deixar lavar as toalhas desta semana por nossa conta, pra você ver como volta?"},
+    {k:"studios", t:"Dono de 2 a 5 studios — o perfil que já fechou", via:"WhatsApp",
+     txt:"Oi, [nome]! Sou da lavanderia do Posto Zandoná, na Ottokar Doerffel, 1489. Já atendo anfitriões aqui do bairro com enxoval de studio — lençol, toalha e edredom — por quilo, com busca e entrega, e prazo de mesmo dia pra quem deixa até as 10h. Pra quem tem 3 ou 4 unidades sai bem mais barato que manter máquina em casa e perder a manhã com isso. Quer que eu faça a primeira virada por nossa conta pra você comparar?"},
     {k:"ilpi", t:"Lar de idosos e casa de repouso", via:"Ligação",
      txt:"Bom dia, eu gostaria de falar com a administração, por favor. Somos a lavanderia do Posto Zandoná, na Ottokar Doerffel. Atendemos instituições com contrato mensal de enxoval, com nota fiscal, volume fechado e prazo garantido. Posso passar uma proposta com valor por quilo pra vocês compararem com o custo atual de lavar internamente?"}
   ];
