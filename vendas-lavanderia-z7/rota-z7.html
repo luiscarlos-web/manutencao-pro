@@ -105,6 +105,7 @@ li.row.done .name{text-decoration:line-through; text-decoration-color:var(--ink-
 .chip{font-family:var(--f-disp); font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; padding:2px 6px; background:var(--surface-3); color:var(--ink-2)}
 .chip.raio{background:var(--accent-soft); color:var(--accent-ink)}
 .chip.check{background:var(--signal-soft); color:var(--signal)}
+.chip.porte{background:var(--ok-soft); color:var(--ok)}
 .meta{margin:4px 0 0; font-size:13px; color:var(--ink-2)}
 .why{margin:5px 0 0; font-size:12.5px; color:var(--ink-3); max-width:62ch}
 .tels{display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; align-items:center}
@@ -170,7 +171,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
   <header class="mast">
     <div class="kicker">
       <span class="lbl">Lavanderia &middot; Posto Zandoná Z7</span>
-      <span class="lbl" style="color:var(--signal)">60 contatos</span>
+      <span class="lbl" style="color:var(--signal)">57 contatos</span>
     </div>
     <h1>Rota Comercial Z7</h1>
     <p class="sub">Prospecção B2B da lavanderia: pousadas, Airbnb, lares de idosos, pet shops e comércio no raio de 6&nbsp;km do posto. Marque o status conforme for ligando — fica salvo e sincroniza entre seus aparelhos.</p>
@@ -180,7 +181,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
       <span class="mono">(47) 3438-8571</span>
     </div>
     <div class="score">
-      <div><div class="lbl">Na lista</div><div class="n" id="s-total">60</div></div>
+      <div><div class="lbl">Na lista</div><div class="n" id="s-total">57</div></div>
       <div><div class="lbl">Já contatados</div><div class="n" id="s-cont">0</div></div>
       <div class="conversa"><div class="lbl">Em negociação</div><div class="n" id="s-neg">0</div></div>
       <div class="fechado"><div class="lbl">Fecharam</div><div class="n" id="s-fec">0</div></div>
@@ -259,7 +260,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
 
   var WAVES = [
     {id:1, when:"Semana 1", t:"Vizinhança, a pé", d:"Tudo que dá para visitar caminhando. Leve cartão e ofereça uma lavagem de cortesia — conversão alta e imediata. Comece pelo Convention Bureau: fica na mesma rua e abre dezenas de hotéis de uma vez."},
-    {id:2, when:"Semana 2", t:"Pousadas, hostels e apart-hotéis", d:"Só o porte que terceiriza: até cerca de 30 quartos, sem lavanderia industrial própria. O decisor é o dono e atende o próprio WhatsApp — ligue entre 9h–11h ou 14h–17h. Hotel grande e de rede está fora da lista de propósito: tem lavanderia dentro de casa."},
+    {id:2, when:"Semana 2", t:"Pousadas e hostels de até 10 quartos", d:"O corte é o lençol passado. Sem calandra, só serve quem aceita o lençol lavado, seco e dobrado — na prática, até 10 quartos. A pergunta que qualifica na primeira ligação não é quantos quartos, é: vocês precisam que o lençol volte passado? Se precisar, não é cliente, por menor que seja. Hotel está fora da lista de propósito. O decisor é o dono e atende o próprio WhatsApp — ligue entre 9h–11h ou 14h–17h."},
     {id:3, when:"Semana 3", t:"Lares de idosos", d:"Ciclo de decisão mais longo, ticket bem maior, enxoval trocado todo dia. Peça para falar com a administração, nunca com a recepção."},
     {id:4, when:"Semana 4", t:"Short stay: donos de 2 a 5 studios", d:"Três frentes. Os operadores pequenos, que já têm telefone público. Os prédios de studio, onde os anfitriões estão concentrados — vá presencialmente, fale com zelador e síndico. E os multiplicadores: uma construtora ou gestora entrega dezenas de anfitriões de uma vez. Nunca aborde anfitrião pelo chat do Airbnb."}
   ];
@@ -285,21 +286,19 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     {id:"pet-jaragua", w:1, prio:2, seg:"pet", nome:"Pet shop — R. Jaraguá, 910", end:"R. Jaraguá, 910, salas 1 e 2", bairro:"América", raio:"b", tel:["(47) 3023-7320","(47) 99783-0156"], why:"Banho e tosa. Confirme o nome da loja ao ligar.", pitch:"comercio", check:true},
     {id:"vitavet", w:1, prio:2, seg:"pet", nome:"Vita Vet — Clínica Veterinária e Pet Shop", end:"R. Otto Boehm, 847", bairro:"América", raio:"b", tel:[], why:"Clínica com pet shop. Confirmar telefone no Google Maps.", pitch:"comercio", check:true},
 
-    {id:"ipanema", w:2, prio:1, seg:"hospedagem", nome:"Pousada Ipanema", end:"R. Paraíba, 912", bairro:"Anita Garibaldi", raio:"b", tel:["(47) 3227-8462"], why:"Pousada pequena no mesmo bairro — exatamente o perfil que terceiriza enxoval.", pitch:"pousada"},
-    {id:"joinvilense", w:2, prio:1, seg:"hospedagem", nome:"Pousada Joinvilense", end:"R. Corupá, 267", bairro:"Anita Garibaldi", raio:"b", tel:["(47) 98816-2760"], why:"WhatsApp direto do dono. Decisão numa conversa só.", pitch:"pousada"},
-    {id:"american", w:2, prio:1, seg:"hospedagem", nome:"American Hostel", end:"R. Capinzal, 584", bairro:"América", raio:"b", tel:["(47) 99918-8474"], why:"Hostel = muito lençol e toalha com margem apertada. Perfil que adora terceirizar.", pitch:"pousada"},
-    {id:"jhostel", w:2, prio:2, seg:"hospedagem", nome:"Joinville Hostel & Pousada", end:"R. Dona Francisca, 1376", bairro:"Saguaçu", raio:"c", tel:["(47) 3424-0844"], extra:"info@joinvillehostel.com.br", why:"Hostel consolidado, volume alto de roupa de cama.", pitch:"pousada"},
-    {id:"psaguacu", w:2, prio:2, seg:"hospedagem", nome:"Pousada Saguaçu", end:"R. Guaratuba, 189", bairro:"Saguaçu", raio:"c", tel:["(47) 3435-3747","(47) 98855-3191"], why:"Operação familiar desde 1989, enxuta — terceirizar sai mais barato que manter máquina.", pitch:"pousada"},
-    {id:"bomsossego", w:2, prio:2, seg:"hospedagem", nome:"Pousada Bom Sossego", end:"R. Francisco Gomes de Oliveira, 410", bairro:"Saguaçu", raio:"c", tel:["(47) 98914-4439"], why:"Pousada pequena — o dono atende o próprio WhatsApp.", pitch:"pousada"},
-    {id:"paradizzo", w:2, prio:2, seg:"hospedagem", nome:"Paradizzo Apart Hotel", end:"R. Dona Francisca, 3383", bairro:"Zona Industrial Norte", raio:"c", tel:["(47) 3804-4000","(47) 98443-0738"], extra:"reservas@paradizzohotel.com.br", why:"Apart-hotel de estadia longa para profissionais: enxoval do apartamento e roupa do próprio hóspede. Dois serviços num cliente só.", pitch:"pousada"},
-    {id:"louros", w:2, prio:2, seg:"hospedagem", nome:"Louros Apart Hotel", end:"", bairro:"Bom Retiro", raio:"c", tel:["(47) 3427-5656"], why:"Apart-hotel, estadias longas.", pitch:"pousada"},
-    {id:"cidadeflores", w:2, prio:3, seg:"hospedagem", nome:"Hostel Cidade das Flores", end:"R. Manaus, 140", bairro:"Joinville", raio:"c", tel:["(47) 99979-1951"], why:"Hostel com café da manhã: cama, banho e mesa.", pitch:"pousada"},
-    {id:"mandallah", w:2, prio:3, seg:"hospedagem", nome:"Hostel Mandallah", end:"R. Cecílio Ferreira, 186", bairro:"Iririú", raio:"c", tel:["(47) 99931-2958"], why:"Hostel.", pitch:"pousada"},
-    {id:"boavista", w:2, prio:3, seg:"hospedagem", nome:"Hostel e Pousada Boa Vista", end:"R. São Borja, 532", bairro:"Boa Vista", raio:"c", tel:["(47) 98914-9835"], why:"Hostel.", pitch:"pousada"},
-    {id:"economica", w:2, prio:3, seg:"hospedagem", nome:"Econômica Joinville Hostel e Pousada", end:"R. José Gerard Rolim Filho, 259", bairro:"Bom Retiro", raio:"c", tel:["(47) 98488-9961"], why:"Hostel econômico.", pitch:"pousada"},
-    {id:"casadosol", w:2, prio:3, seg:"hospedagem", nome:"Hostel Casa do Sol", end:"R. Repórter Luiz Mauro, 64", bairro:"Iririú", raio:"c", tel:[], why:"Confirmar telefone no Google Maps.", pitch:"pousada", check:true},
-    {id:"urbano", w:2, prio:3, seg:"hospedagem", nome:"Hostel Urbano Joinville", end:"", bairro:"Joinville", raio:"x", tel:[], extra:"hosteljoinville.com.br", why:"Anuncia lavanderia própria. Aborde como apoio em pico de ocupação e para peça pesada (edredom, cobertor).", pitch:"pousada", check:true},
-    {id:"doish", w:2, prio:3, seg:"hospedagem", nome:"Dois H Hotel", end:"", bairro:"Joinville", raio:"x", tel:[], extra:"doishhotel.com.br", why:"Confirmar endereço antes: existe registro homônimo em São Francisco do Sul.", pitch:"pousada", check:true},
+    {id:"ipanema", w:2, prio:1, seg:"hospedagem", nome:"Pousada Ipanema", end:"R. Paraíba, 912", bairro:"Anita Garibaldi", porte:"porte a confirmar", raio:"b", tel:["(47) 3227-8462"], why:"Pousada pequena no mesmo bairro — exatamente o perfil que terceiriza enxoval.", pitch:"pousada"},
+    {id:"joinvilense", w:2, prio:1, seg:"hospedagem", nome:"Pousada Joinvilense", end:"R. Corupá, 267", bairro:"Anita Garibaldi", porte:"porte a confirmar", raio:"b", tel:["(47) 98816-2760"], why:"WhatsApp direto do dono. Decisão numa conversa só.", pitch:"pousada"},
+    {id:"american", w:2, prio:1, seg:"hospedagem", nome:"American Hostel", end:"R. Capinzal, 584", bairro:"América", porte:"5 quartos", raio:"b", tel:["(47) 99918-8474"], why:"Hostel = muito lençol e toalha com margem apertada. Perfil que adora terceirizar.", pitch:"pousada"},
+    {id:"jhostel", w:2, prio:2, seg:"hospedagem", nome:"Joinville Hostel & Pousada", end:"R. Dona Francisca, 1376", bairro:"Saguaçu", porte:"porte a confirmar", raio:"c", tel:["(47) 3424-0844"], extra:"info@joinvillehostel.com.br", why:"Hostel consolidado, volume alto de roupa de cama.", pitch:"pousada"},
+    {id:"psaguacu", w:2, prio:2, seg:"hospedagem", nome:"Pousada Saguaçu", end:"R. Guaratuba, 189", bairro:"Saguaçu", porte:"porte a confirmar", raio:"c", tel:["(47) 3435-3747","(47) 98855-3191"], why:"Operação familiar desde 1989, enxuta — terceirizar sai mais barato que manter máquina.", pitch:"pousada"},
+    {id:"bomsossego", w:2, prio:2, seg:"hospedagem", nome:"Pousada Bom Sossego", end:"R. Francisco Gomes de Oliveira, 410", bairro:"Saguaçu", porte:"9 quartos", raio:"c", tel:["(47) 98914-4439"], why:"Pousada pequena — o dono atende o próprio WhatsApp.", pitch:"pousada"},
+    {id:"louros", w:2, prio:2, seg:"hospedagem", nome:"Louros Apart Hotel", end:"", bairro:"Bom Retiro", porte:"porte a confirmar", raio:"c", tel:["(47) 3427-5656"], why:"Apart-hotel, estadias longas.", pitch:"pousada"},
+    {id:"cidadeflores", w:2, prio:3, seg:"hospedagem", nome:"Hostel Cidade das Flores", end:"R. Manaus, 140", bairro:"Joinville", porte:"4 quartos", raio:"c", tel:["(47) 99979-1951"], why:"Hostel com café da manhã: cama, banho e mesa.", pitch:"pousada"},
+    {id:"mandallah", w:2, prio:3, seg:"hospedagem", nome:"Hostel Mandallah", end:"R. Cecílio Ferreira, 186", bairro:"Iririú", porte:"4 quartos", raio:"c", tel:["(47) 99931-2958"], why:"Hostel.", pitch:"pousada"},
+    {id:"economica", w:2, prio:3, seg:"hospedagem", nome:"Econômica Joinville Hostel e Pousada", end:"R. José Gerard Rolim Filho, 259", bairro:"Bom Retiro", porte:"porte a confirmar", raio:"c", tel:["(47) 98488-9961"], why:"Hostel econômico.", pitch:"pousada"},
+    {id:"germanica", w:2, prio:2, seg:"hospedagem", nome:"Hostel Pousada Germânica", porte:"8 quartos", end:"R. Wolfgang Amon, 437", bairro:"Costa e Silva", raio:"c", tel:["(47) 98838-1755"], extra:"hostelpousadagermanica.com", why:"Oito quartos, mistura de compartilhado e privativo. Hostel não pede lençol passado — perfil exato.", pitch:"pousada"},
+    {id:"casadosol", w:2, prio:3, seg:"hospedagem", nome:"Hostel Casa do Sol", end:"R. Repórter Luiz Mauro, 64", bairro:"Iririú", porte:"3 quartos", raio:"c", tel:[], why:"Confirmar telefone no Google Maps.", pitch:"pousada", check:true},
+    {id:"urbano", w:2, prio:3, seg:"hospedagem", nome:"Hostel Urbano Joinville", end:"", bairro:"Joinville", porte:"5 suítes", raio:"x", tel:[], extra:"hosteljoinville.com.br", why:"Anuncia lavanderia própria. Aborde como apoio em pico de ocupação e para peça pesada (edredom, cobertor).", pitch:"pousada", check:true},
     {id:"biergarten", w:2, prio:2, seg:"restaurante", nome:"Biergarten", end:"R. Visconde de Taunay, 1183", bairro:"Centro", raio:"b", tel:["(47) 3028-3771"], why:"Via Gastronômica: pano de copa, avental e toalha de mesa, todo dia.", pitch:"comercio"},
     {id:"fattori", w:2, prio:2, seg:"restaurante", nome:"Fattori da Visconde", end:"R. Visconde de Taunay, 1136", bairro:"Centro", raio:"b", tel:["(47) 3027-7727"], why:"Via Gastronômica.", pitch:"comercio"},
     {id:"pizzapedra", w:2, prio:2, seg:"restaurante", nome:"Pizza na Pedra", end:"R. Visconde de Taunay, 1223", bairro:"Centro", raio:"b", tel:["(47) 3028-1868"], why:"Via Gastronômica.", pitch:"comercio"},
@@ -322,7 +321,6 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     {id:"curacao", w:4, prio:1, seg:"predio", nome:"Curaçao Residence", end:"R. Porto União, 1194", bairro:"Anita Garibaldi", raio:"a", tel:[], extra:"plantas de 39 a 163 m², com coworking e piscina", why:"Entre Anita Garibaldi e Atiradores, já entregue e com unidades mobiliadas sendo alugadas. Coworking no prédio = hóspede corporativo de estadia curta.", pitch:"studios"},
     {id:"flipchave", w:4, prio:1, seg:"airbnb", nome:"FlipChave — hospedagem short stay", end:"R. Dona Francisca, 2948", bairro:"Saguaçu", raio:"c", tel:["(47) 99788-0123"], extra:"contato@flipchave.com.br · flipchave.com.br", why:"Startup joinvilense que opera hospedagem de curta temporada com software próprio — e é sócia do HotelSmart, de 124 studios. Um contrato aqui vale por dezenas de anfitriões soltos.", pitch:"gestora"},
     {id:"convisa", w:4, prio:1, seg:"multiplicador", nome:"Construtora Convisa", end:"R. Jacob Eisenhuth, 572", bairro:"Atiradores", raio:"a", tel:["(47) 3032-4400"], extra:"seg a sex 8h–18h, sáb 8h–14h", why:"Constrói o HotelSmart (124 studios mobiliados, obra desde jan/2026) junto com a FlipChave. Está pertinho do posto e tem a lista dos investidores compradores. Proponha ser a lavanderia indicada do empreendimento.", pitch:"gestora"},
-    {id:"smart55", w:4, prio:2, seg:"airbnb", nome:"55 Smart Hotel (55 Inn Flat)", end:"R. XV de Novembro, 3555", bairro:"Glória", raio:"c", tel:["(47) 99179-1887"], extra:"contato@55smarthotel.com · 14 unidades", why:"Apart-hotel de 14 unidades — exatamente o porte que não justifica lavanderia própria nem interessa lavanderia industrial.", pitch:"studios"},
     {id:"viplan", w:4, prio:2, seg:"multiplicador", nome:"Construtora Viplan", end:"R. Evaristo da Veiga, 343", bairro:"Glória", raio:"c", tel:["(47) 3205-0050","(47) 98415-1340"], extra:"comercial@construtoraviplan.com.br", why:"Incorporadora do Ed. Frame e de outros compactos. Tem a carteira de compradores-investidores — peça para ser indicado na entrega das chaves.", pitch:"gestora"},
     {id:"bhomy", w:4, prio:2, seg:"multiplicador", nome:"B.Homy — gestão de Airbnb", end:"", bairro:"Atua em SC", raio:"x", tel:[], extra:"bhomy.com", why:"Gestora presente em mais de 15 cidades de SP, SC, RJ e MG. Cuida de limpeza e enxoval dos imóveis que administra.", pitch:"gestora", check:true},
     {id:"anfitrioesgestao", w:4, prio:3, seg:"multiplicador", nome:"Anfitriões Gestão de Imóveis", end:"", bairro:"Atua em Joinville", raio:"x", tel:[], extra:"anfitrioesgestaodeimoveis.com", why:"Gestora de imóveis por temporada. Contato pelo site.", pitch:"gestora", check:true},
@@ -332,7 +330,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
 
   var SCRIPTS = [
     {k:"pousada", t:"Pousada, hostel e apart-hotel", via:"WhatsApp",
-     txt:"Bom dia, [nome]! Aqui é o [seu nome], da lavanderia do Posto Zandoná da Ottokar Doerffel, 1489. A gente começou a atender pousadas da região com enxoval — lençol, toalha e fronha — com preço por quilo, nota fiscal e prazo garantido: o que chega até as 10h volta no mesmo dia. A gente busca e entrega sem custo aqui na região. Posso lavar um jogo por nossa conta pra vocês testarem o padrão?"},
+     txt:"Bom dia, [nome]! Aqui é o [seu nome], da lavanderia do Posto Zandoná da Ottokar Doerffel, 1489. A gente começou a atender pousadas da região com enxoval — lençol, toalha e fronha — com preço por quilo, nota fiscal e prazo garantido: o que chega até as 10h volta no mesmo dia. A gente busca e entrega sem custo aqui na região. Só uma coisa pra eu não te fazer perder tempo: vocês precisam que o lençol volte passado, ou lavado e dobrado resolve? Posso lavar um jogo por nossa conta pra vocês testarem o padrão."},
     {k:"gestora", t:"Anfitrião de Airbnb e administradora", via:"WhatsApp",
      txt:"Oi, [nome]! Vi que você cuida de imóveis de temporada aqui na região. Sou da lavanderia do Posto Zandoná (Ottokar Doerffel, 1489). A gente resolve o enxoval entre um hóspede e outro: deixou até as 10h, está pronto no mesmo dia — dá tempo de virar o apartamento entre o check-out e o check-in. Busco e entrego de graça. Quer testar numa virada?"},
     {k:"comercio", t:"Pet shop, barbearia, salão, academia e restaurante", via:"Presencial",
@@ -429,6 +427,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     var chips = el("div","chips");
     chips.appendChild(el("span","chip", SEGS[p.seg] || p.seg));
     chips.appendChild(el("span","chip raio", RAIO[p.raio] || p.raio));
+    if(p.porte) chips.appendChild(el("span", /^\d/.test(p.porte) ? "chip porte" : "chip check", p.porte));
     if(p.check) chips.appendChild(el("span","chip check","conferir"));
     main.appendChild(chips);
 
