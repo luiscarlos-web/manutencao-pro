@@ -170,7 +170,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
   <header class="mast">
     <div class="kicker">
       <span class="lbl">Lavanderia &middot; Posto Zandoná Z7</span>
-      <span class="lbl" style="color:var(--signal)">65 contatos</span>
+      <span class="lbl" style="color:var(--signal)">60 contatos</span>
     </div>
     <h1>Rota Comercial Z7</h1>
     <p class="sub">Prospecção B2B da lavanderia: pousadas, Airbnb, lares de idosos, pet shops e comércio no raio de 6&nbsp;km do posto. Marque o status conforme for ligando — fica salvo e sincroniza entre seus aparelhos.</p>
@@ -180,7 +180,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
       <span class="mono">(47) 3438-8571</span>
     </div>
     <div class="score">
-      <div><div class="lbl">Na lista</div><div class="n" id="s-total">65</div></div>
+      <div><div class="lbl">Na lista</div><div class="n" id="s-total">60</div></div>
       <div><div class="lbl">Já contatados</div><div class="n" id="s-cont">0</div></div>
       <div class="conversa"><div class="lbl">Em negociação</div><div class="n" id="s-neg">0</div></div>
       <div class="fechado"><div class="lbl">Fecharam</div><div class="n" id="s-fec">0</div></div>
@@ -259,7 +259,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
 
   var WAVES = [
     {id:1, when:"Semana 1", t:"Vizinhança, a pé", d:"Tudo que dá para visitar caminhando. Leve cartão e ofereça uma lavagem de cortesia — conversão alta e imediata. Comece pelo Convention Bureau: fica na mesma rua e abre dezenas de hotéis de uma vez."},
-    {id:2, when:"Semana 2", t:"Hospedagem e Via Gastronômica", d:"Pousada pequena e hostel: o decisor é o dono e atende o próprio WhatsApp. Ligue entre 9h–11h ou 14h–17h."},
+    {id:2, when:"Semana 2", t:"Pousadas, hostels e apart-hotéis", d:"Só o porte que terceiriza: até cerca de 30 quartos, sem lavanderia industrial própria. O decisor é o dono e atende o próprio WhatsApp — ligue entre 9h–11h ou 14h–17h. Hotel grande e de rede está fora da lista de propósito: tem lavanderia dentro de casa."},
     {id:3, when:"Semana 3", t:"Lares de idosos", d:"Ciclo de decisão mais longo, ticket bem maior, enxoval trocado todo dia. Peça para falar com a administração, nunca com a recepção."},
     {id:4, when:"Semana 4", t:"Short stay: donos de 2 a 5 studios", d:"Três frentes. Os operadores pequenos, que já têm telefone público. Os prédios de studio, onde os anfitriões estão concentrados — vá presencialmente, fale com zelador e síndico. E os multiplicadores: uma construtora ou gestora entrega dezenas de anfitriões de uma vez. Nunca aborde anfitrião pelo chat do Airbnb."}
   ];
@@ -285,14 +285,9 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     {id:"pet-jaragua", w:1, prio:2, seg:"pet", nome:"Pet shop — R. Jaraguá, 910", end:"R. Jaraguá, 910, salas 1 e 2", bairro:"América", raio:"b", tel:["(47) 3023-7320","(47) 99783-0156"], why:"Banho e tosa. Confirme o nome da loja ao ligar.", pitch:"comercio", check:true},
     {id:"vitavet", w:1, prio:2, seg:"pet", nome:"Vita Vet — Clínica Veterinária e Pet Shop", end:"R. Otto Boehm, 847", bairro:"América", raio:"b", tel:[], why:"Clínica com pet shop. Confirmar telefone no Google Maps.", pitch:"comercio", check:true},
 
-    {id:"hotel10", w:2, prio:1, seg:"hospedagem", nome:"Hotel 10 Joinville", end:"R. Anita Garibaldi, 2131", bairro:"Anita Garibaldi", raio:"a", tel:["(47) 3439-3777"], why:"Hotel econômico no mesmo bairro: giro alto de enxoval e sem lavanderia industrial própria.", pitch:"pousada"},
     {id:"ipanema", w:2, prio:1, seg:"hospedagem", nome:"Pousada Ipanema", end:"R. Paraíba, 912", bairro:"Anita Garibaldi", raio:"b", tel:["(47) 3227-8462"], why:"Pousada pequena no mesmo bairro — exatamente o perfil que terceiriza enxoval.", pitch:"pousada"},
     {id:"joinvilense", w:2, prio:1, seg:"hospedagem", nome:"Pousada Joinvilense", end:"R. Corupá, 267", bairro:"Anita Garibaldi", raio:"b", tel:["(47) 98816-2760"], why:"WhatsApp direto do dono. Decisão numa conversa só.", pitch:"pousada"},
     {id:"american", w:2, prio:1, seg:"hospedagem", nome:"American Hostel", end:"R. Capinzal, 584", bairro:"América", raio:"b", tel:["(47) 99918-8474"], why:"Hostel = muito lençol e toalha com margem apertada. Perfil que adora terceirizar.", pitch:"pousada"},
-    {id:"tannenhof", w:2, prio:1, seg:"hospedagem", nome:"Hotel Tannenhof", end:"R. Visconde de Taunay, 340", bairro:"Centro / Atiradores", raio:"b", tel:[], extra:"98 quartos, piscina e academia", why:"Porte médio-grande. Entre pelo enxoval extra de pico (Festival de Dança, eventos do Expoville) em vez de tentar o contrato inteiro de cara.", pitch:"pousada", check:true},
-    {id:"germania", w:2, prio:2, seg:"hospedagem", nome:"Hotel Germânia", end:"R. Ministro Calógeras, 612", bairro:"Centro", raio:"b", tel:["(47) 3433-9886"], extra:"hotelgermania.com.br", why:"Trabalha com diária e também aluguel por mês — troca de enxoval constante.", pitch:"pousada"},
-    {id:"principe", w:2, prio:2, seg:"hospedagem", nome:"Príncipe Hotel", end:"R. Jerônimo Coelho, 27, sala 06", bairro:"Centro", raio:"b", tel:["(47) 3433-4555"], extra:"hprincipe.com.br", why:"Hotel de centro, público corporativo, ocupação estável o ano todo.", pitch:"pousada"},
-    {id:"colon", w:2, prio:2, seg:"hospedagem", nome:"Hotel Colon Palace", end:"Centro de Joinville", bairro:"Centro", raio:"b", tel:["(47) 3433-6188"], extra:"hotelcolon.com.br", why:"Tem piscina e academia — toalha extra além do enxoval de quarto.", pitch:"pousada"},
     {id:"jhostel", w:2, prio:2, seg:"hospedagem", nome:"Joinville Hostel & Pousada", end:"R. Dona Francisca, 1376", bairro:"Saguaçu", raio:"c", tel:["(47) 3424-0844"], extra:"info@joinvillehostel.com.br", why:"Hostel consolidado, volume alto de roupa de cama.", pitch:"pousada"},
     {id:"psaguacu", w:2, prio:2, seg:"hospedagem", nome:"Pousada Saguaçu", end:"R. Guaratuba, 189", bairro:"Saguaçu", raio:"c", tel:["(47) 3435-3747","(47) 98855-3191"], why:"Operação familiar desde 1989, enxuta — terceirizar sai mais barato que manter máquina.", pitch:"pousada"},
     {id:"bomsossego", w:2, prio:2, seg:"hospedagem", nome:"Pousada Bom Sossego", end:"R. Francisco Gomes de Oliveira, 410", bairro:"Saguaçu", raio:"c", tel:["(47) 98914-4439"], why:"Pousada pequena — o dono atende o próprio WhatsApp.", pitch:"pousada"},
