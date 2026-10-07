@@ -206,7 +206,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
 
   <section class="panel" id="scripts">
     <h2>Roteiros prontos</h2>
-    <p class="lead">O argumento que fecha não é desconto — é prazo. <b>Deixou até as 10h, volta no mesmo dia</b> resolve a virada entre o check-out das 11h e o check-in das 15h. Use isso na primeira frase.</p>
+    <p class="lead" style="border-left:3px solid var(--signal); background:var(--signal-soft); color:var(--ink); padding:10px 12px"><b>Não use estes quatro roteiros ainda.</b> Foram escritos presumindo busca e entrega e devolução no mesmo dia — a lavanderia é de autosserviço, quem lava é o próprio cliente. Textos novos em aprovação; estes ficam aqui só como histórico.</p>
     <div id="script-list"></div>
   </section>
 
@@ -260,7 +260,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
 
   var WAVES = [
     {id:1, when:"Semana 1", t:"Vizinhança, a pé", d:"Tudo que dá para visitar caminhando. Leve cartão e ofereça uma lavagem de cortesia — conversão alta e imediata. Comece pelo Convention Bureau: fica na mesma rua e abre dezenas de hotéis de uma vez."},
-    {id:2, when:"Semana 2", t:"Pousadas e hostels de até 10 quartos", d:"O corte é o lençol passado. Sem calandra, só serve quem aceita o lençol lavado, seco e dobrado — na prática, até 10 quartos. A pergunta que qualifica na primeira ligação não é quantos quartos, é: vocês precisam que o lençol volte passado? Se precisar, não é cliente, por menor que seja. Hotel está fora da lista de propósito. O decisor é o dono e atende o próprio WhatsApp — ligue entre 9h–11h ou 14h–17h."},
+    {id:2, when:"Semana 2", t:"Pousadas e hostels de até 10 quartos", d:"O corte é o lençol passado. Em autosserviço o cliente lava e seca ele mesmo, e ninguém passa — então só serve quem aceita o lençol lavado e seco. Na prática, até 10 quartos. A pergunta que qualifica na primeira ligação não é quantos quartos, é: vocês precisam que o lençol volte passado? Se precisar, não é cliente, por menor que seja. Hotel está fora da lista de propósito. O decisor é o dono e atende o próprio WhatsApp — ligue entre 9h–11h ou 14h–17h."},
     {id:3, when:"Semana 3", t:"Lares de idosos", d:"Ciclo de decisão mais longo, ticket bem maior, enxoval trocado todo dia. Peça para falar com a administração, nunca com a recepção."},
     {id:4, when:"Semana 4", t:"Short stay: donos de 2 a 5 studios", d:"Três frentes. Os operadores pequenos, que já têm telefone público. Os prédios de studio, onde os anfitriões estão concentrados — vá presencialmente, fale com zelador e síndico. E os multiplicadores: uma construtora ou gestora entrega dezenas de anfitriões de uma vez. Nunca aborde anfitrião pelo chat do Airbnb."}
   ];
@@ -330,7 +330,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
 
   var SCRIPTS = [
     {k:"pousada", t:"Pousada, hostel e apart-hotel", via:"WhatsApp",
-     txt:"Bom dia, [nome]! Aqui é o [seu nome], da lavanderia do Posto Zandoná da Ottokar Doerffel, 1489. A gente começou a atender pousadas da região com enxoval — lençol, toalha e fronha — com preço por quilo, nota fiscal e prazo garantido: o que chega até as 10h volta no mesmo dia. A gente busca e entrega sem custo aqui na região. Só uma coisa pra eu não te fazer perder tempo: vocês precisam que o lençol volte passado, ou lavado e dobrado resolve? Posso lavar um jogo por nossa conta pra vocês testarem o padrão."},
+     txt:"Bom dia, [nome]! Aqui é o [seu nome], da lavanderia do Posto Zandoná da Ottokar Doerffel, 1489. A gente começou a atender pousadas da região com enxoval — lençol, toalha e fronha — com preço por quilo, nota fiscal e prazo garantido: o que chega até as 10h volta no mesmo dia. A gente busca e entrega sem custo aqui na região. Só uma coisa pra eu não te fazer perder tempo: vocês precisam que o lençol volte passado? Posso lavar um jogo por nossa conta pra vocês testarem o padrão."},
     {k:"gestora", t:"Anfitrião de Airbnb e administradora", via:"WhatsApp",
      txt:"Oi, [nome]! Vi que você cuida de imóveis de temporada aqui na região. Sou da lavanderia do Posto Zandoná (Ottokar Doerffel, 1489). A gente resolve o enxoval entre um hóspede e outro: deixou até as 10h, está pronto no mesmo dia — dá tempo de virar o apartamento entre o check-out e o check-in. Busco e entrego de graça. Quer testar numa virada?"},
     {k:"comercio", t:"Pet shop, barbearia, salão, academia e restaurante", via:"Presencial",
