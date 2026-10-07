@@ -26,22 +26,28 @@ contrato, nota fiscal e prazo garantido.
 
 ---
 
-## 2. A oferta B2B (sem isso, a lista não converte)
+## 2. A oferta B2B — o que autosserviço realmente vende
 
-Ligar oferecendo "desconto" não fecha. O que fecha uma pousada ou um anfitrião de Airbnb é
-**previsibilidade**. Monte o pacote assim:
+A lavanderia é de **autosserviço**: quem lava é o cliente. Não há busca e entrega, não há
+prazo de devolução, não há dobra e não há passadoria. Isso não enfraquece a venda B2B — muda o
+que ela promete.
 
-| Item | Por que é decisivo |
+O que o cliente compra aqui é **tempo e secagem**, não serviço.
+
+| Argumento | Por que funciona |
 |---|---|
-| **Plano mensal com franquia de kg** (ex.: 40 kg/mês, com preço fechado, e valor por kg excedente) | Vira custo fixo no orçamento dele. É o que transforma cliente em contrato. |
-| **Prazo garantido: deixou até 10h, retira no mesmo dia** | Check-out 11h / check-in 15h. Quem resolve isso ganha o Airbnb. Este é o argumento nº 1. |
-| **Leva e traz grátis no raio de 3 km** | Tira o único motivo real de objeção. A maioria dos alvos da lista está dentro desse raio. |
-| **Nota fiscal e faturamento mensal** | Pousada e administradora não compram sem NF. |
-| **Kit rotativo de enxoval** (ele fica com 2 jogos girando) | Elimina o medo de "ficar sem lençol". |
+| **Máquina industrial: tudo de uma vez** | O enxoval de uma pousada de 8 quartos ou de 3 studios não cabe em máquina doméstica. Aqui vai em duas ou três máquinas ao mesmo tempo. |
+| **Secadora: sai seco em cerca de uma hora** | Este é o argumento mais forte em Joinville. No inverno úmido, lençol no varal leva três dias e azeda. É o que nenhuma máquina de apartamento resolve. |
+| **Peça grande: edredom, cobertor, tapete** | Simplesmente não entram em máquina de casa. Porta de entrada de cliente novo. |
+| **6h às 22h, estacionamento na porta** | Resolve antes de abrir a loja ou depois de fechar — e dá para combinar com abastecer ou lavar o carro no Super Ducha. |
+| **Conta faturada mensal com nota fiscal** | O diferencial B2B de verdade: a empresa usa as máquinas o mês todo e recebe uma nota só. Acaba com funcionário pagando do bolso e pedindo reembolso. |
+| **Primeira lavagem por conta da casa** | Em autosserviço, cortesia é só um crédito. Custa pouco e derruba a objeção inicial. |
 
-**Precifique por kg, não por peça**, para cama e banho. É mais simples de vender e mais rápido de operar.
+**O produto a criar:** pacote de cargas pré-pagas (o cliente compra um bloco de cargas por
+valor fechado e vai consumindo, com nota no fechamento). É mais simples de operar que
+franquia por quilo e encaixa no faturamento que já existe.
 
----
+**O que não prometer, nunca:** buscar, entregar, dobrar, passar ou dar prazo de devolução.
 
 ## 3. Airbnb: a parte que quase todo mundo erra
 
@@ -113,7 +119,7 @@ O mesmo vale para eventos do Centreventos Cau Hansen, Expoville e Arena Joinvill
 
 ---
 
-## 5. Como atacar a lista (ordem que funciona)
+## 5. Como atacar a lista (ordem geográfica)
 
 **Semana 1 — os vizinhos, a pé.** Tudo que está a até 1 km: Barbearia Navajo (mesma rua),
 pet shops dos Atiradores e Anita Garibaldi, academias, spa, salões. Visita presencial com cartão e
@@ -132,7 +138,7 @@ a administração, não com a recepção.
 
 **Semana 4 — Airbnb.** Diaristas, administradoras, zeladores e Instagram, na ordem da seção 3.
 
-**Regra de operação:** 10 contatos por dia, registrados. Ligação sem registro vira contato perdido.
+**Sem leva e traz, distância é o filtro número um, acima do segmento.** O cliente precisa dirigir até o posto, e há concorrente de autosserviço no caminho (Laundromat da América, entre outros). Trabalhe os blocos da página na ordem: até 1 km, depois 1–3 km, e só então 3–6 km.\n\n**Regra de operação:** 10 contatos por dia, registrados. Ligação sem registro vira contato perdido.
 Espere fechar entre 1 e 2 a cada 10 abordagens — com 54 contatos, isso são de 5 a 10 clientes
 recorrentes no primeiro mês.
 
@@ -140,31 +146,17 @@ recorrentes no primeiro mês.
 
 ## 6. Roteiros prontos
 
-**WhatsApp — pousada / hostel / apart-hotel**
-> Bom dia, [nome]! Aqui é o [seu nome], da lavanderia do Posto Zandoná da Ottokar Doerffel, 1489.
-> A gente começou a atender pousadas da região com enxoval — lençol, toalha e fronha — com preço
-> por quilo, nota fiscal e **prazo garantido: o que chega até as 10h volta no mesmo dia**.
-> A gente busca e entrega sem custo aqui na região.
-> Posso lavar um jogo por nossa conta pra vocês testarem o padrão?
+Os onze roteiros, um por tipo de cliente, estão na página de prospecção (`rota-z7.html`),
+já com o nome preenchido e ligados ao botão de disparo de cada contato. Todos partem do
+mesmo núcleo: máquina industrial, secadora, estacionamento e primeira lavagem de cortesia.
 
-**WhatsApp — anfitrião de Airbnb**
-> Oi, [nome]! Vi que você recebe hóspedes aqui na região. Sou da lavanderia do Posto Zandoná
-> (Ottokar Doerffel, 1489). A gente resolve o enxoval entre um hóspede e outro: **deixou até as
-> 10h, está pronto no mesmo dia** — dá tempo de virar o apartamento entre o check-out e o check-in.
-> Busco e entrego de graça. Quer testar numa virada?
+A pergunta que qualifica pousada e hostel, antes de qualquer preço:
 
-**Presencial — pet shop, barbearia, salão, academia**
-> Somos a lavanderia aqui do posto, a 500 metros. Sei que vocês gastam um tempo enorme com
-> toalha todo dia. A gente lava por quilo, busca e entrega. **Quer me deixar lavar as toalhas desta
-> semana por nossa conta pra você ver como volta?**
+> **Vocês precisam que o lençol volte passado?**
 
-**Ligação — lar de idosos**
-> Bom dia, eu gostaria de falar com a administração. Somos a lavanderia do Posto Zandoná, na
-> Ottokar Doerffel. Atendemos instituições com contrato mensal de enxoval, com nota fiscal, volume
-> fechado e prazo garantido. Posso passar uma proposta com valor por quilo pra vocês compararem
-> com o custo atual de lavar internamente?
-
----
+Se precisar, não é cliente — por menor que seja. Não há calandra, e em autosserviço ninguém
+passa. Fazer essa pergunta na primeira mensagem evita a pior venda possível: a que fecha e
+depois devolve o enxoval reclamando do vinco.
 
 ## 7. Placar para acompanhar
 

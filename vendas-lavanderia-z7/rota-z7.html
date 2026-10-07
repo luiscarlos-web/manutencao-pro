@@ -121,6 +121,12 @@ li.row.done .name{text-decoration:line-through; text-decoration-color:var(--ink-
 .ctl select[data-st="fechado"]{border-color:var(--ok); color:var(--ok); font-weight:600}
 .ctl select[data-st="conversa"]{border-color:var(--signal); color:var(--signal); font-weight:600}
 .ctl select[data-st="nao"]{color:var(--ink-3)}
+.btn-wa,.btn-copy{display:block; width:100%; text-align:center; font-family:var(--f-disp); font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; padding:8px 10px; cursor:pointer; border:1px solid var(--accent); border-radius:2px}
+.btn-wa{background:var(--accent); color:var(--surface); text-decoration:none}
+.btn-wa:hover{filter:brightness(1.12)}
+.btn-copy{background:transparent; color:var(--accent-ink)}
+.btn-copy:hover{background:var(--accent-soft)}
+.msgtag{font-family:var(--f-mono); font-size:10px; color:var(--ink-3); text-align:center; display:block}
 .notebtn{font-family:var(--f-disp); font-size:10.5px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; background:none; border:1px dashed var(--line-2); color:var(--ink-3); padding:5px; cursor:pointer}
 .notebtn:hover{color:var(--accent-ink); border-color:var(--accent)}
 .notebtn.has{border-style:solid; color:var(--accent-ink); border-color:var(--accent)}
@@ -171,17 +177,17 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
   <header class="mast">
     <div class="kicker">
       <span class="lbl">Lavanderia &middot; Posto Zandoná Z7</span>
-      <span class="lbl" style="color:var(--signal)">57 contatos</span>
+      <span class="lbl" style="color:var(--signal)">56 contatos</span>
     </div>
     <h1>Rota Comercial Z7</h1>
-    <p class="sub">Prospecção B2B da lavanderia: pousadas, Airbnb, lares de idosos, pet shops e comércio no raio de 6&nbsp;km do posto. Marque o status conforme for ligando — fica salvo e sincroniza entre seus aparelhos.</p>
+    <p class="sub">Prospecção B2B da lavanderia de autosserviço, em ordem de distância do posto — sem leva e traz, quem está perto é quem fecha. Cada contato já vem com a mensagem pronta para o tipo dele. Marque o status conforme for falando: fica salvo e sincroniza entre seus aparelhos.</p>
     <div class="addr">
       <span><b>R. Ottokar Doerffel, 1489</b> — Anita Garibaldi, Joinville/SC</span>
       <span>Posto <b>6h–22h</b></span>
       <span class="mono">(47) 3438-8571</span>
     </div>
     <div class="score">
-      <div><div class="lbl">Na lista</div><div class="n" id="s-total">57</div></div>
+      <div><div class="lbl">Na lista</div><div class="n" id="s-total">56</div></div>
       <div><div class="lbl">Já contatados</div><div class="n" id="s-cont">0</div></div>
       <div class="conversa"><div class="lbl">Em negociação</div><div class="n" id="s-neg">0</div></div>
       <div class="fechado"><div class="lbl">Fecharam</div><div class="n" id="s-fec">0</div></div>
@@ -206,7 +212,7 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
 
   <section class="panel" id="scripts">
     <h2>Roteiros prontos</h2>
-    <p class="lead" style="border-left:3px solid var(--signal); background:var(--signal-soft); color:var(--ink); padding:10px 12px"><b>Não use estes quatro roteiros ainda.</b> Foram escritos presumindo busca e entrega e devolução no mesmo dia — a lavanderia é de autosserviço, quem lava é o próprio cliente. Textos novos em aprovação; estes ficam aqui só como histórico.</p>
+    <p class="lead">Cada contato tem um botão que já carrega a mensagem certa pelo tipo e troca o nome. Os textos ficam aqui para você conferir e ajustar. Em todos eles o que vende é o mesmo: <b>máquina industrial, secadora e estacionamento</b> — o cliente resolve tudo numa parada de uma hora, em vez de pendurar lençol três dias.</p>
     <div id="script-list"></div>
   </section>
 
@@ -254,20 +260,20 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     parceria:"Parceria-chave", hospedagem:"Hospedagem", airbnb:"Short stay / operador",
     predio:"Prédio de studios", multiplicador:"Multiplicador",
     ilpi:"Lar de idosos", pet:"Pet shop", beleza:"Beleza / Estética",
-    academia:"Academia", restaurante:"Restaurante", vizinho:"Vizinho imediato"
+    academia:"Academia", restaurante:"Restaurante"
   };
-  var RAIO = {a:"até 1 km", b:"1–3 km", c:"3–6 km", x:"conferir"};
+  var RAIO = {a:"até 1 km", b:"1–3 km", c:"3–6 km", x:"remoto / a conferir"};
 
-  var WAVES = [
-    {id:1, when:"Semana 1", t:"Vizinhança, a pé", d:"Tudo que dá para visitar caminhando. Leve cartão e ofereça uma lavagem de cortesia — conversão alta e imediata. Comece pelo Convention Bureau: fica na mesma rua e abre dezenas de hotéis de uma vez."},
-    {id:2, when:"Semana 2", t:"Pousadas e hostels de até 10 quartos", d:"O corte é o lençol passado. Em autosserviço o cliente lava e seca ele mesmo, e ninguém passa — então só serve quem aceita o lençol lavado e seco. Na prática, até 10 quartos. A pergunta que qualifica na primeira ligação não é quantos quartos, é: vocês precisam que o lençol volte passado? Se precisar, não é cliente, por menor que seja. Hotel está fora da lista de propósito. O decisor é o dono e atende o próprio WhatsApp — ligue entre 9h–11h ou 14h–17h."},
-    {id:3, when:"Semana 3", t:"Lares de idosos", d:"Ciclo de decisão mais longo, ticket bem maior, enxoval trocado todo dia. Peça para falar com a administração, nunca com a recepção."},
-    {id:4, when:"Semana 4", t:"Short stay: donos de 2 a 5 studios", d:"Três frentes. Os operadores pequenos, que já têm telefone público. Os prédios de studio, onde os anfitriões estão concentrados — vá presencialmente, fale com zelador e síndico. E os multiplicadores: uma construtora ou gestora entrega dezenas de anfitriões de uma vez. Nunca aborde anfitrião pelo chat do Airbnb."}
+  var BANDS = [
+    {id:"a", when:"Até 1 km", t:"A pé, a partir do posto", d:"O núcleo do negócio. Sem leva e traz, quem decide é a distância — esses são os que realmente atravessam a rua para usar a máquina. Visita presencial, cartão na mão e cupom de primeira lavagem."},
+    {id:"b", when:"1 a 3 km", t:"Raio real de captação", d:"Cinco minutos de carro, e ainda compensa a viagem para o cliente — principalmente quem já passa pela Ottokar Doerffel e pode combinar com abastecer."},
+    {id:"c", when:"3 a 6 km", t:"Baixa prioridade", d:"Tem concorrente de autosserviço no caminho, a começar pela Laundromat da América. Ninguém passa na porta de uma lavanderia para chegar na sua. Só gaste tempo aqui depois de esgotar os dois blocos acima — ou se o volume compensar a viagem."},
+    {id:"x", when:"Contato remoto", t:"Telefone, e-mail ou endereço a confirmar", d:"Administradoras e construtoras: aqui a distância do escritório não importa, importa onde está a carteira de imóveis delas — um contato pode render dezenas de anfitriões perto de você. Inclui também os que ainda estão sem endereço confirmado."}
   ];
+
 
   var P = [
     {id:"cvb", w:1, prio:1, seg:"parceria", nome:"Joinville Region Convention & Visitors Bureau", end:"R. Ottokar Doerffel, 1733", bairro:"Anita Garibaldi", raio:"a", tel:[], extra:"visitejoinville.com.br", why:"Vizinho de rua, a ~250 m. Articula os meios de hospedagem da cidade — uma reunião aqui pode abrir dezenas de hotéis e pousadas de uma vez. Sua ligação nº 1.", pitch:"pousada"},
-    {id:"borracharia", w:1, prio:1, seg:"vizinho", nome:"Borracharia do Alemão", end:"R. Ottokar Doerffel, 1489", bairro:"Anita Garibaldi", raio:"a", tel:["(47) 3417-3000"], why:"Opera no mesmo endereço do posto. Uniforme engordurado é serviço de alto valor — e vira parceria de indicação mútua.", pitch:"comercio", check:true},
     {id:"pet-calogeras", w:1, prio:1, seg:"pet", nome:"Pet shop — R. Ministro Calógeras, 1472", end:"R. Ministro Calógeras, 1472", bairro:"Atiradores", raio:"a", tel:["(47) 99738-2080","(47) 99717-2108"], why:"Banho e tosa gasta dezenas de toalhas por dia e quase nenhum tem estrutura para lavar. Confirme o nome da loja ao ligar.", pitch:"comercio", check:true},
     {id:"pet-santiago", w:1, prio:1, seg:"pet", nome:"Pet shop — R. Coronel Santiago, 870", end:"R. Coronel Santiago, 870, sala 2", bairro:"Anita Garibaldi", raio:"a", tel:["(47) 98903-9023"], why:"Banho e tosa no mesmo bairro do posto. Confirme o nome da loja ao ligar.", pitch:"comercio", check:true},
     {id:"navajo", w:1, prio:1, seg:"beleza", nome:"Barbearia Navajo", end:"R. Ottokar Doerffel, 730, sala 4", bairro:"Atiradores", raio:"a", tel:[], why:"Mesma rua da lavanderia, a ~800 m. Toalha todo dia. Visita a pé, sem ligar antes.", pitch:"comercio", check:true},
@@ -328,18 +334,54 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     {id:"hotelsmart", w:4, prio:3, seg:"predio", nome:"HotelSmart — 124 studios mobiliados (em obra)", end:"endereço a confirmar", bairro:"Anita Garibaldi", raio:"x", tel:[], extra:"FlipChave + Convisa · obra desde jan/2026", why:"124 studios mobiliados de investidor num prédio só. É o maior pool de anfitriões pequenos que vai existir no bairro. Chegue via FlipChave ou Convisa, não espere ficar pronto.", pitch:"gestora", check:true}
   ];
 
+  var MSG_POR_SEG = {
+    hospedagem:"pousada", airbnb:"gestora", predio:"zelador", multiplicador:"gestora",
+    parceria:"bureau", ilpi:"ilpi", pet:"pet", beleza:"beleza",
+    academia:"academia", restaurante:"restaurante"
+  };
+  var MSG_OVERRIDE = { convisa:"construtora", viplan:"construtora" };
+  function msgDe(p){ return MSG_OVERRIDE[p.id] || MSG_POR_SEG[p.seg] || "pousada"; }
+
+  var BASE = "Luis Carlos";
   var SCRIPTS = [
-    {k:"pousada", t:"Pousada, hostel e apart-hotel", via:"WhatsApp",
-     txt:"Bom dia, [nome]! Aqui é o [seu nome], da lavanderia do Posto Zandoná da Ottokar Doerffel, 1489. A gente começou a atender pousadas da região com enxoval — lençol, toalha e fronha — com preço por quilo, nota fiscal e prazo garantido: o que chega até as 10h volta no mesmo dia. A gente busca e entrega sem custo aqui na região. Só uma coisa pra eu não te fazer perder tempo: vocês precisam que o lençol volte passado? Posso lavar um jogo por nossa conta pra vocês testarem o padrão."},
-    {k:"gestora", t:"Anfitrião de Airbnb e administradora", via:"WhatsApp",
-     txt:"Oi, [nome]! Vi que você cuida de imóveis de temporada aqui na região. Sou da lavanderia do Posto Zandoná (Ottokar Doerffel, 1489). A gente resolve o enxoval entre um hóspede e outro: deixou até as 10h, está pronto no mesmo dia — dá tempo de virar o apartamento entre o check-out e o check-in. Busco e entrego de graça. Quer testar numa virada?"},
-    {k:"comercio", t:"Pet shop, barbearia, salão, academia e restaurante", via:"Presencial",
-     txt:"Somos a lavanderia aqui do posto, a poucos minutos daqui. Sei que vocês gastam um tempo enorme com toalha todo dia. A gente lava por quilo, busca e entrega. Quer me deixar lavar as toalhas desta semana por nossa conta, pra você ver como volta?"},
-    {k:"studios", t:"Dono de 2 a 5 studios — o perfil que já fechou", via:"WhatsApp",
-     txt:"Oi, [nome]! Sou da lavanderia do Posto Zandoná, na Ottokar Doerffel, 1489. Já atendo anfitriões aqui do bairro com enxoval de studio — lençol, toalha e edredom — por quilo, com busca e entrega, e prazo de mesmo dia pra quem deixa até as 10h. Pra quem tem 3 ou 4 unidades sai bem mais barato que manter máquina em casa e perder a manhã com isso. Quer que eu faça a primeira virada por nossa conta pra você comparar?"},
-    {k:"ilpi", t:"Lar de idosos e casa de repouso", via:"Ligação",
-     txt:"Bom dia, eu gostaria de falar com a administração, por favor. Somos a lavanderia do Posto Zandoná, na Ottokar Doerffel. Atendemos instituições com contrato mensal de enxoval, com nota fiscal, volume fechado e prazo garantido. Posso passar uma proposta com valor por quilo pra vocês compararem com o custo atual de lavar internamente?"}
+    {k:"pousada", t:"Pousada e hostel de até 10 quartos", via:"WhatsApp",
+     txt:"Bom dia, [nome]! Aqui é o " + BASE + ", da lavanderia do Posto Zandoná, na Ottokar Doerffel, 1489.\n\nÉ autosserviço — vocês mesmos usam as máquinas — mas são industriais: o enxoval de uma diária inteira vai de uma vez e sai seco na secadora em cerca de uma hora. Nada de lençol pendurado três dias no inverno.\n\nAbrimos das 6h às 22h, com estacionamento na porta. E para empresa eu faturo no mês, com nota.\n\nQueria te dar a primeira lavagem por conta da casa, pra vocês medirem quanto tempo economiza. Posso deixar o cupom aí?"},
+    {k:"anfitriao", t:"Anfitrião de Airbnb / dono de 2 a 5 studios", via:"WhatsApp · use quando encontrar o anfitrião",
+     txt:"Oi, [nome]! Sou o " + BASE + ", da lavanderia do Posto Zandoná, na Ottokar Doerffel, 1489.\n\nJá tem anfitrião aqui do bairro usando a gente pra virar apartamento: traz o enxoval de todas as unidades de uma vez, usa duas ou três máquinas ao mesmo tempo, e em cerca de uma hora sai com tudo lavado e seco.\n\nÉ autosserviço, então você não depende de prazo de lavanderia nem de ninguém: entra, lava, seca e leva. Das 6h às 22h, estacionamento na porta — e dá pra abastecer ou lavar o carro na mesma parada.\n\nA primeira lavagem é por minha conta. Quer testar na próxima virada?"},
+    {k:"zelador", t:"Zelador ou síndico de prédio de studios", via:"Presencial",
+     txt:"Bom dia! Sou o " + BASE + ", da lavanderia do Posto Zandoná, aqui na Ottokar Doerffel, 1489 — pertinho do prédio.\n\nÉ autosserviço com máquina industrial, das 6h às 22h. O que mais traz morador daqui é edredom, cobertor e tapete, que não entram na máquina de apartamento.\n\nVi que o [nome] tem bastante studio alugado por temporada, e esse pessoal vira enxoval toda semana.\n\nPosso deixar cupons de primeira lavagem grátis na portaria pros moradores, e um cartaz pequeno no mural se o síndico autorizar?"},
+    {k:"gestora", t:"Administradora e co-host de temporada", via:"WhatsApp",
+     txt:"Bom dia, [nome]. Sou o " + BASE + ", da lavanderia do Posto Zandoná (Ottokar Doerffel, 1489, Anita Garibaldi).\n\nAutosserviço com máquinas industriais: a equipe de limpeza de vocês resolve o enxoval de vários imóveis numa parada só — lava e seca em cerca de uma hora, das 6h às 22h, com estacionamento na porta.\n\nPra quem administra carteira eu abro conta faturada: a equipe usa as máquinas o mês todo e vocês recebem uma nota só no fechamento, sem ninguém pagando do próprio bolso e pedindo reembolso depois.\n\nTopa testar com um imóvel? A primeira lavagem é por minha conta."},
+    {k:"construtora", t:"Construtora e incorporadora", via:"WhatsApp ou e-mail",
+     txt:"Bom dia. Sou o " + BASE + ", da lavanderia do Posto Zandoná, na Ottokar Doerffel, 1489 — a poucos minutos de vocês.\n\nVocês entregam bastante unidade compacta de investidor, e quem coloca o imóvel pra temporada esbarra sempre no mesmo ponto: studio não tem área de serviço, e lençol de hóspede não seca dentro de apartamento.\n\nQueria propor que a gente entre no kit de entrega de chaves: cupom de primeira lavagem grátis pro comprador e condição fixa pros proprietários do empreendimento, sem custo nenhum pra construtora.\n\nConsigo 15 minutos com quem cuida do relacionamento com os compradores?"},
+    {k:"bureau", t:"Convention & Visitors Bureau", via:"Ligação ou e-mail",
+     txt:"Bom dia. Sou o " + BASE + ", da lavanderia do Posto Zandoná, na Ottokar Doerffel, 1489 — somos quase vizinhos de vocês, no 1733.\n\nSomos autosserviço com máquinas industriais, das 6h às 22h, e atendemos pousada e hostel pequeno da região central.\n\nQueria entender como funciona a relação de vocês com os associados e se cabe uma condição para a rede — pensando no pico do Festival de Dança, quando pousada pequena estoura a capacidade de lavar e precisa de uma válvula de escape perto.\n\nConsigo uma conversa de 20 minutos esta semana?"},
+    {k:"ilpi", t:"Lar de idosos e casa de repouso", via:"Ligação para a administração",
+     txt:"Bom dia, eu gostaria de falar com a administração, por favor.\n\nSomos a lavanderia do Posto Zandoná, na Ottokar Doerffel. Autosserviço com máquinas industriais, das 6h às 22h, e trabalhamos com conta faturada mensal e nota fiscal para instituições.\n\nA ideia é simples: em vez de manter máquina doméstica rodando o dia inteiro, a funcionária traz o enxoval duas ou três vezes por semana e resolve tudo de uma vez — inclusive cobertor e edredom, que é o que mais trava lavanderia interna no inverno.\n\nPosso passar os valores pra vocês compararem com o custo cheio de lavar internamente: energia, água, produto, manutenção da máquina e as horas da funcionária?"},
+    {k:"pet", t:"Pet shop e banho e tosa", via:"Presencial",
+     txt:"Oi, tudo bem? Sou o " + BASE + ", da lavanderia aqui do Posto Zandoná, na Ottokar Doerffel — a poucos minutos daqui.\n\nAutosserviço, com máquina e secadora industrial. Pra banho e tosa o ganho é a secadora: a toalha sai seca na hora, não fica aquele monte pendurado esperando e azedando.\n\nAbrimos às 6h, dá pra resolver antes de abrir a loja, e tem estacionamento na porta.\n\nPrimeira lavagem por minha conta — quer que eu deixe o cupom aqui?"},
+    {k:"restaurante", t:"Restaurante", via:"Presencial, com o responsável",
+     txt:"Oi, posso falar com o responsável? Sou o " + BASE + ", da lavanderia do Posto Zandoná, na Ottokar Doerffel, 1489.\n\nAutosserviço com máquinas industriais, das 6h às 22h — pega antes de abrir e depois de fechar. Pano de copa, avental e toalha de mesa lavam e secam numa parada só.\n\nO que costuma resolver é não depender mais de alguém levar pra lavar em casa no fim de semana. E pra empresa eu faturo no mês, com nota.\n\nQuer testar com a primeira lavagem por minha conta?"},
+    {k:"beleza", t:"Barbearia, salão e estética", via:"Presencial",
+     txt:"Oi, tudo bem? Sou o " + BASE + ", da lavanderia do Posto Zandoná, aqui na Ottokar Doerffel.\n\nAutosserviço com máquina e secadora industrial. Pra salão o ponto é a secadora: toalha que seca no varal fica dura e com cheiro de úmido; na secadora volta macia no mesmo dia.\n\nÉ uma parada de uma hora por semana, e ninguém da equipe precisa levar sacola pra casa.\n\nDeixo a primeira lavagem por minha conta pra você comparar. Pode ser?"},
+    {k:"academia", t:"Academia e estúdio", via:"Presencial",
+     txt:"Oi! Sou o " + BASE + ", da lavanderia do Posto Zandoná, aqui na Ottokar Doerffel.\n\nAutosserviço com máquina e secadora industrial: toalha de treino e pano de higienização lavam e secam numa parada só — sem máquina rodando no intervalo e sem ninguém da recepção cuidando disso.\n\nDas 6h às 22h, com estacionamento na porta.\n\nPrimeira lavagem por minha conta pra você ver o resultado. Quando fica bom testar?"}
   ];
+  var SCRIPT_MAP = {};
+  SCRIPTS.forEach(function(x){ SCRIPT_MAP[x.k] = x; });
+
+  function celularDe(p){
+    for(var i=0;i<(p.tel||[]).length;i++){
+      var d = (p.tel[i]||"").replace(/\D/g,"");
+      if(d.length === 11 && d.charAt(2) === "9") return d;
+    }
+    return null;
+  }
+  function textoDe(p){
+    var sc = SCRIPT_MAP[msgDe(p)];
+    return sc ? sc.txt.replace(/\[nome\]/g, p.nome) : "";
+  }
+
 
   var STATUS = [
     {k:"todo", l:"A contatar"},
@@ -479,6 +521,22 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     });
     ctl.appendChild(sel);
 
+    var sc = SCRIPT_MAP[msgDe(p)];
+    var txtMsg = textoDe(p);
+    var cel = celularDe(p);
+    if(cel){
+      var wa = el("a","btn-wa","Abrir no WhatsApp");
+      wa.href = "https://wa.me/55" + cel + "?text=" + encodeURIComponent(txtMsg);
+      wa.target = "_blank"; wa.rel = "noopener";
+      ctl.appendChild(wa);
+    } else {
+      var cp = el("button","btn-copy","Copiar mensagem");
+      cp.type = "button";
+      cp.addEventListener("click", function(){ copy(txtMsg, cp); });
+      ctl.appendChild(cp);
+    }
+    if(sc) ctl.appendChild(el("span","msgtag", "roteiro: " + sc.k));
+
     var nb = el("button","notebtn","＋ nota");
     nb.type = "button";
     nb.setAttribute("aria-expanded","false");
@@ -530,20 +588,20 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
   function renderList(){
     var host = document.getElementById("list");
     host.textContent = "";
-    WAVES.forEach(function(w){
+    BANDS.forEach(function(w){
       var sec = el("section","wave");
-      sec.dataset.wave = w.id;
+      sec.dataset.band = w.id;
       var h = el("div","wave-head");
       h.appendChild(el("span","when", w.when));
       h.appendChild(el("h2", null, w.t));
       h.appendChild(el("p", null, w.d));
       sec.appendChild(h);
       var ul = el("ul","rows");
-      P.filter(function(p){ return p.w === w.id; })
+      P.filter(function(p){ return p.raio === w.id; })
        .sort(function(a,b){ return a.prio - b.prio; })
        .forEach(function(p){ ul.appendChild(buildRow(p)); });
       sec.appendChild(ul);
-      var em = el("div","empty","Nenhum contato desta etapa bate com o filtro.");
+      var em = el("div","empty","Nenhum contato deste bloco bate com o filtro.");
       em.hidden = true;
       sec.appendChild(em);
       host.appendChild(sec);
@@ -569,10 +627,10 @@ footer.note-foot{margin-top:30px; padding-top:14px; border-top:1px solid var(--l
     var q = (document.getElementById("q").value || "").toLowerCase().trim();
     var fs = document.getElementById("f-seg").value;
     var fst = document.getElementById("f-st").value;
-    WAVES.forEach(function(w){
-      var sec = document.querySelector('.wave[data-wave="' + w.id + '"]');
+    BANDS.forEach(function(w){
+      var sec = document.querySelector('.wave[data-band="' + w.id + '"]');
       var shown = 0;
-      P.filter(function(p){ return p.w === w.id; }).forEach(function(p){
+      P.filter(function(p){ return p.raio === w.id; }).forEach(function(p){
         var e = els[p.id]; if(!e) return;
         var st = (state[p.id] && state[p.id].status) || "todo";
         var hay = (p.nome + " " + (p.end||"") + " " + (p.bairro||"") + " " + (p.extra||"") + " " + (SEGS[p.seg]||"")).toLowerCase();
